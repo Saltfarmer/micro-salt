@@ -1,0 +1,58 @@
+--- --- @import "minima";
+
+/* 1. INSTALL FONT (Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title,
+.post-link {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* 2. COLORS (#0857C3, #307FE2, #71C5E8) */
+/* Links and Primary Color */
+a,
+.site-title,
+.site-title:visited {
+    color: #0857C3 !important;
+    /* Dark Blue */
+}
+
+/* Hover State */
+a:hover,
+.post-link:hover {
+    color: #307FE2 !important;
+    /* Mid Blue */
+    text-decoration: none;
+}
+
+/* Date/Meta text color */
+.post-meta,
+span[style*="color: gray"] {
+    color: #71C5E8 !important;
+    /* Light Blue */
+}
+
+/* 3. BOLD HEADER */
+.site-title {
+    font-weight: 900 !important;
+    /* Extra Bold */
+    letter-spacing: -1px;
+    /* Tighter, more modern tracking */
+}
+
+/* 4. REMOVE FOOTER */
+.site-footer {
+    display: none !important;
+}
+
+/* Optional: Make the content column slightly narrower for better reading */
+.wrapper {
+    max-width: 650px;
+}
