@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Micro Salt</title>
+    <title>{{ page.title | default: site.title }}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
 
         /* 2. HEADER DESIGN */
         header {
-            background: #fff;
+            background: #ffffff;
             padding: 30px 25px;
 
             /* Borders: Left/Right to match posts, DOTTED Bottom */
@@ -108,34 +108,9 @@
     <div class="wrapper">
 
         <header>
-            <a class="site-title" href="/micro-salt/%20/">Micro Salt</a>
+            <a class="site-title" href="{{ " /" | relative_url }}">{{ site.title }}</a>
         </header>
 
         <main>
-            <div class="home">
-    <ul class="post-list" style="list-style: none; padding: 0;">
-        
-        <li>
-            <div style="font-size: 0.85em; color: #828282; margin-bottom: 5px;">
-                <a href="/micro-salt/2026/02/04/testing-timestamp.html" style="color: inherit; text-decoration: none;">
-                    04 Feb 2026 - 23:16
-                </a>
-            </div>
-
-            <div class="post-content">
-                <h1 id="checking-tho">Checking tho.</h1>
-
-<p>This is my first micro-update. No title needed, just the text.</p>
-
-<p><strong>Markdown</strong> works here too.</p>
-
-<p>Timestamp works</p>
-
-            </div>
-
-            <hr style="border: 0; border-top: 1px solid #eee; margin-top: 25px;">
-        </li>
-        
-    </ul>
-</div>
+            {{ content }}
         </main>
