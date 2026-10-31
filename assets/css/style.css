@@ -1,0 +1,90 @@
+/* Micro Salt: one column, small cards, nothing else.
+   Palette: Nusantara Blue #0857C3, Cakrawala Blue #307FE2, Mentari Blue #71C5E8, Deep Navy #042A61
+   Font: Inter (self-hosted) */
+
+@font-face { font-family: "Inter"; font-weight: 400; font-style: normal; font-display: swap; src: url("../fonts/inter-Regular.woff") format("woff"); }
+@font-face { font-family: "Inter"; font-weight: 600; font-style: normal; font-display: swap; src: url("../fonts/inter-SemiBold.woff") format("woff"); }
+@font-face { font-family: "Inter"; font-weight: 700; font-style: normal; font-display: swap; src: url("../fonts/inter-Bold.woff") format("woff"); }
+
+:root {
+  --bg: #f3f7fc;
+  --surface: #ffffff;
+  --text: #0f2447;
+  --muted: #5b6b85;
+  --border: #dce6f3;
+  --primary: #0857c3;
+  --primary-hover: #042a61;
+  --tag-bg: #d6effb;
+  --tag-fg: #042a61;
+  --font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #071326;
+    --surface: #0d1d38;
+    --text: #e6eefb;
+    --muted: #93a4c3;
+    --border: #1e3358;
+    --primary: #71c5e8;
+    --primary-hover: #d6effb;
+    --tag-bg: #14284a;
+    --tag-fg: #71c5e8;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { color: var(--primary-hover); }
+a:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; border-radius: 4px; }
+
+.wrapper { max-width: 640px; margin: 0 auto; padding: 0 16px 48px; }
+
+/* ---- Header ---- */
+.site-header { padding: 28px 2px 8px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.site-title { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: var(--primary); }
+.site-tagline { font-size: 14px; color: var(--muted); }
+
+/* ---- Month label ---- */
+.month { margin: 28px 2px 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+/* ---- Entry ---- */
+.entry { margin: 10px 0; padding: 16px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.entry__time { display: inline-block; font-size: 12.5px; font-weight: 600; color: var(--muted); }
+.entry__time:hover { color: var(--primary); }
+.entry__title { margin: 6px 0 0; font-size: 17px; font-weight: 700; line-height: 1.35; letter-spacing: -0.01em; }
+.entry__body { margin-top: 6px; overflow-wrap: anywhere; }
+.entry__body > :first-child { margin-top: 0; }
+.entry__body > :last-child { margin-bottom: 0; }
+.entry__body p { margin: 0.6em 0; }
+.entry__body h1, .entry__body h2, .entry__body h3, .entry__body h4 { margin: 0.8em 0 0.3em; font-size: 1.1em; line-height: 1.35; }
+.entry__body ul, .entry__body ol { margin: 0.6em 0; padding-left: 1.4em; }
+.entry__body blockquote { margin: 0.8em 0; padding: 0.1em 1em; color: var(--muted); border-left: 3px solid var(--primary); }
+.entry__body img { max-width: 100%; height: auto; border-radius: 10px; }
+.entry__body code { padding: 0.1em 0.35em; font-size: 0.88em; background: var(--tag-bg); color: var(--tag-fg); border-radius: 5px; }
+.entry__body pre { overflow-x: auto; padding: 12px 14px; font-size: 13.5px; line-height: 1.5; color: #d6effb; background: #042a61; border-radius: 10px; }
+.entry__body pre code { padding: 0; color: inherit; background: none; }
+.entry__body hr { border: 0; border-top: 1px solid var(--border); margin: 1em 0; }
+
+.tag { display: inline-block; padding: 0 0.55em; font-size: 0.88em; font-weight: 600; line-height: 1.55; color: var(--tag-fg); background: var(--tag-bg); border-radius: 999px; }
+
+/* ---- Single entry page + footer ---- */
+.back { margin: 18px 2px 4px; font-size: 14px; }
+.empty { margin: 32px 2px; color: var(--muted); }
+.site-footer { margin-top: 36px; font-size: 13px; text-align: center; color: var(--muted); }
+.site-footer a { color: var(--muted); }
+.site-footer a:hover { color: var(--primary); }

@@ -1,0 +1,4 @@
+# Jekyll build output. GitHub Pages builds the site itself, so this does not need to be committed.
+_site/
+.jekyll-cache/
+.sass-cache/

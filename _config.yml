@@ -1,5 +1,14 @@
 title: Micro Salt
-description: Microblog updates
+description: Quick, short notes to myself
 theme: minima
 url: "https://saltfarmer.github.io"
 baseurl: "/micro-salt"
+
+# Every post uses the "post" layout, so a post file only needs a date in its name.
+# (Works for posts written by hand or exported from BlogWriter.)
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

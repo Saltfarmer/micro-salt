@@ -1,0 +1,12 @@
+{%- comment -%}One journal entry. Params: entry (post or page), body (rendered content).{%- endcomment -%}
+{%- assign e = include.entry -%}
+{%- assign clock = e.date | date: "%H:%M" -%}
+<article class="entry h-entry">
+  <a class="entry__time u-url" href="{{ e.url | relative_url }}"><time class="dt-published" datetime="{{ e.date | date_to_xmlschema }}">{{ e.date | date: "%-d %b %Y" }}{% if clock != "00:00" %} &middot; {{ clock }}{% endif %}</time></a>
+  {%- if e.title and e.title != "" %}
+  <h2 class="entry__title p-name">{{ e.title | escape }}</h2>
+  {%- endif %}
+  <div class="entry__body e-content">
+    {{ include.body | replace: '<img ', '<img loading="lazy" decoding="async" ' }}
+  </div>
+</article>
