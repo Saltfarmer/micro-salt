@@ -1,0 +1,8 @@
+Delete these old files from your repo after copying (or replace the whole folder, keeping .git):
+  _posts/2026-02-04-testing-timestamp.md
+  _posts/2026-02-05-smartphone-post copy.md   ->  renamed to  _posts/2026-02-05-smartphone-post.md
+  _site/2026/02/04/testing-timestamp.html
+  _site/assets/main.css
+  _site/assets/minima-social-icons.svg
+  _site/feed.xml
+  _site/index.html

@@ -3,6 +3,11 @@ description: Quick, short notes to myself
 theme: minima
 url: "https://saltfarmer.github.io"
 baseurl: "/micro-salt"
+timezone: Asia/Jakarta
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
 
 # Every post uses the "post" layout, so a post file only needs a date in its name.
 # (Works for posts written by hand or exported from BlogWriter.)
