@@ -8,6 +8,7 @@ timezone: Asia/Jakarta
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 # Every post uses the "post" layout, so a post file only needs a date in its name.
 # (Works for posts written by hand or exported from BlogWriter.)
